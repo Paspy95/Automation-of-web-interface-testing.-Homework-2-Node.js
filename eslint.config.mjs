@@ -1,47 +1,20 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import prettierConfig from "eslint-config-prettier";
+import globals from 'globals';
+import pluginJs from '@eslint/js';
 
 export default [
-  { files: ["**/*.js"], languageOptions: { sourceType: "commonjs" } },
-  { languageOptions: { globals: globals.node } },
-  pluginJs.configs.recommended,
-  prettierConfig,
-  {
-    rules: {
-      "no-unused-vars": "error",
-      "no-debagger": "error",
-      "no-var": "error",
-      "prefer-const": "error",
-      "no-unused-vars": "warn",
-      "no-undef": "warn",
-      "guard-for-in": "error",
-      "no-multi-assign": "error",
-      "no-empty": "error",
-      "no-eval": "error",
-      "no-extra-boolean-cast": "error",
-      "no-implicit-coercion": "error",
-      "no-implicit-globals": "error",
-      "no-global-assign": "error",
-      "no-invalid-this": "error",
-      "dot-notation": "error",
-      eqeqeq: "error",
-      "no-octal": "error",
-      "no-plusplus": "error",
-      "no-redeclare": "error",
-      "no-throw-literal": "error",
-      "no-unused-expressions": "error",
-      "no-useless-catch": "error",
-      "no-useless-escape": "error",
-      "prefer-arrow-callback": "error",
-      "prefer-destructuring": "error",
-      "prefer-numeric-literals": "error",
-      "prefer-object-spread": "error",
-      "prefer-rest-params": "error",
-      "prefer-spread": "error",
-      "require-await": "error",
-      "keyword-spacing": "error",
-      "space-infix-ops": "error",
+    { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
+    { languageOptions: { globals: globals.node } },
+    pluginJs.configs.recommended,
+    {
+        rules: {
+            'no-var': 'error',
+            semi: 'error',
+            indent: 'error',
+            'no-multi-spaces': 'error',
+            'space-in-parens': 'error',
+            'no-multiple-empty-lines': 'error',
+            'prefer-const': 'error',
+            'no-use-before-define': 'error',
+        },
     },
-  },
 ];
